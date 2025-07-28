@@ -1,4 +1,7 @@
+import { router } from '@kit.ArkUI'
+
 // loginPage.ets
+@Entry
 @Component
 struct dengluPage {
   @State userName: string = ''
@@ -63,6 +66,7 @@ struct dengluPage {
         .borderRadius(8)
         .onClick(() => {
           // TODO: 登录逻辑
+          router.pushUrl({url:'/pages/aiPage'})
         })
 
       // 注册
@@ -75,6 +79,8 @@ struct dengluPage {
           .fontColor('#007DFF')
           .onClick(() => {
             // TODO: 跳转注册
+            console.info("跳转注册页面");
+            router.pushUrl({url:'pages/zhucePage'})
           })
       }
     }

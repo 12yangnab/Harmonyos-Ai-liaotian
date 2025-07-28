@@ -26,10 +26,6 @@ struct LiaotianPage {
         Column({ space: 8 }) {
           // 消息1
           Row({ space: 8 }) {
-            Text('2025-07-18')
-              .fontSize(12)
-              .fontColor('#666666')
-              .margin({ left: 16 })
             Column({ space: 4 }) {
               Text('您好，我是您的ai小助手，请问有什么可以帮您的')
                 .fontSize(14)
