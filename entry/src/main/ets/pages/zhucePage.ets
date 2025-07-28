@@ -1,13 +1,9 @@
 import { promptAction } from '@kit.ArkUI';
 import { http } from '@kit.NetworkKit';
 import { router } from '@kit.ArkUI';
+import ServerResponseDataType from '../mould/ServerResponseDataType';
 
 
-interface type {
-  code: number,
-  message: string,
-  data: object
-}
 @Entry
 @Component
 struct ZhucePage {
@@ -155,7 +151,7 @@ struct ZhucePage {
               });
 
               //将json字符串转化成我们的对象来操作
-              let result = JSON.parse(response.result as string) as type;
+              let result = JSON.parse(response.result as string) as ServerResponseDataType;
 
               //注册成功
               if (result.code === 0) {
