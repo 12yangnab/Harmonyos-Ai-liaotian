@@ -1,5 +1,6 @@
 import { promptAction } from '@kit.ArkUI';
 import { http } from '@kit.NetworkKit';
+import { router } from '@kit.ArkUI';
 
 
 interface type {
@@ -7,7 +8,7 @@ interface type {
   message: string,
   data: object
 }
-
+@Entry
 @Component
 struct ZhucePage {
   @State account: string = '';
@@ -169,7 +170,11 @@ struct ZhucePage {
                     text:"好的",
                     color:"#00000"
                   }]
-                })
+                }).then((ret) => {
+                  if (ret.index === 0) {        // 点击了“好的”
+                    router.replaceUrl({ url: 'pages/dengluPage' }); // 或 pushUrl
+                  }
+                });
               }
               promptAction.showDialog({
                 message: response.result + ""

@@ -17,19 +17,33 @@ export default struct aiPage {
 
       //中间内容
       Column(){
+        //聊天内容
         Row(){
+          //左边
           Column() {
             Image($r("app.media.ChatGPT"))
               .height(40)
               .width(40)
-              .fillColor("#15A783")
-          }
+              .fillColor('#15A783')
+          }.height(50)
+          //中间
           Column(){
-            Text()
-            Text()
-          }
+            Text("2025-07-28")
+              .fontSize(12)
+              .fontColor("#888888")
+            Text("您好，我是您的ai小助手，请问有什么可以帮您的111111111111111111111111")
+              .backgroundColor(Color.White)
+              .fontSize(14)
+              .padding(5)
+              .borderRadius(5)
+          }.layoutWeight(1)
+
+          //右边
+          Column().width(50)
         }.width("100%")
+        .alignItems(VerticalAlign.Top)
       }.backgroundColor("#ececec")
+      .padding(5)
       .layoutWeight(1)
       .width("100%")
       //底部输入框

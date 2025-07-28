@@ -1,8 +1,8 @@
 {
   "src": [
+    "pages/dengluPage",
     "pages/Index",
-    "pages/zhucepage",
-    "pages/denglupage",
+    "pages/zhucePage",
     "pages/aiPage",
     "pages/loginPage",
     "pages/mainPages"
